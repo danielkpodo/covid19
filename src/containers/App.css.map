@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,IAAK;EACH,UAAU,EAAE,GAAG",
+"sources": ["scss/partials/_global.scss"],
+"names": [],
+"file": "App.css"
+}

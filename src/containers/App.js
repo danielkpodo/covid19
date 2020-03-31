@@ -1,10 +1,11 @@
 import React from "react";
+import NavigationMenu from "../components/Navigation";
 import "./App.css";
 
 const App = () => {
   return (
     <main>
-      <h1>Hello Covid19</h1>
+      <NavigationMenu />
     </main>
   );
 };
