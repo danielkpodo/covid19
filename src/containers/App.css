@@ -1,4 +1,15 @@
 body {
-  background: red; }
+  background-color: #8a0303;
+  background-image: url("../assets/images/blood.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh; }
+
+.navigation {
+  background: #af111c; }
+
+@media (max-width: 321px) {
+  .github {
+    visibility: hidden; } }
 
 /*# sourceMappingURL=App.css.map */

@@ -1,1 +1,9 @@
+@import "./scss/partials/variables";
 @import "./scss/partials/global";
+@import "./scss/partials/navigation";
+
+@media (max-width: 321px) {
+  .github {
+    visibility: hidden;
+  }
+}

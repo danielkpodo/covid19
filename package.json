@@ -9,9 +9,12 @@
     "axios": "^0.19.2",
     "cheerio": "^1.0.0-rc.3",
     "dotenv": "^8.2.0",
+    "jquery": "^3.4.1",
+    "materialize-css": "^1.0.0-rc.2",
     "node-cron": "^2.0.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-github-corner": "^2.3.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1"
   },
