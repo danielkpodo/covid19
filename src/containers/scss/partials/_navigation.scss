@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "infected";
+  src: url("../assets/fonts/INFECTED.ttf") format("truetype");
+}
+
 .navigation {
   background: $nav-color;
+
+  .brand-logo {
+    font: {
+      family: infected;
+    }
+  }
+
+  .active {
+    color: gold;
+  }
 }

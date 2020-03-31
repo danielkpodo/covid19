@@ -7,14 +7,13 @@ const App = () => {
   return (
     <main>
       <NavigationMenu />
-      {/*<GithubCorner
+      <GithubCorner
         href="https://github.com/danielkpodo/paper-zone"
-        size="55"
-        bannerColor="#21243D"
+        size="60"
+        bannerColor="transparent"
         className="github"
         target="_blank"
       />
-      */}
     </main>
   );
 };

@@ -5,8 +5,15 @@ body {
   background-size: cover;
   height: 100vh; }
 
+@font-face {
+  font-family: "infected";
+  src: url("../assets/fonts/INFECTED.ttf") format("truetype"); }
 .navigation {
   background: #af111c; }
+  .navigation .brand-logo {
+    font-family: infected; }
+  .navigation .active {
+    color: gold; }
 
 @media (max-width: 321px) {
   .github {

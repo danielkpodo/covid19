@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Fragment } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import M from "materialize-css";
 
 const NavigationMenu = () => {
@@ -24,9 +24,9 @@ const NavigationMenu = () => {
     <Fragment>
       <nav className="navigation">
         <div className="nav-wrapper container">
-          <a href="#" className="brand-logo">
-            Covid19 Tracker
-          </a>
+          <Link to="/" className="brand-logo">
+            CORONAVIRUS
+          </Link>
           <a href="#" data-target="mobile-demo" className="sidenav-trigger">
             <i className="material-icons">menu</i>
           </a>
