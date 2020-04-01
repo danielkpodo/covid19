@@ -1,6 +1,8 @@
-import React, { useState, useEffect, Fragment } from "react";
-import { NavLink, Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import M from "materialize-css";
+
+import Logo from "./Logo";
 
 const NavigationMenu = () => {
   const [navLinks, setMenuStates] = useState([
@@ -10,23 +12,22 @@ const NavigationMenu = () => {
 
   useEffect(() => {
     M.AutoInit();
-  });
+  }, []);
 
   const menuLinks = navLinks.map((item, index) => {
     return (
       <li key={index}>
         <NavLink to={item.path}>{item.text}</NavLink>
+        <div className="divider hide-on-large-only"></div>
       </li>
     );
   });
 
   return (
-    <Fragment>
+    <div className="navbar-fixed">
       <nav className="navigation">
         <div className="nav-wrapper container">
-          <Link to="/" className="brand-logo">
-            CORONAVIRUS
-          </Link>
+          <Logo />
           <a href="#" data-target="mobile-demo" className="sidenav-trigger">
             <i className="material-icons">menu</i>
           </a>
@@ -38,7 +39,7 @@ const NavigationMenu = () => {
       <ul className="sidenav" id="mobile-demo">
         {menuLinks}
       </ul>
-    </Fragment>
+    </div>
   );
 };
 

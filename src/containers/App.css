@@ -5,6 +5,10 @@ body {
   background-size: cover;
   height: 100vh; }
 
+img {
+  max-width: 100%;
+  display: block; }
+
 @font-face {
   font-family: "infected";
   src: url("../assets/fonts/INFECTED.ttf") format("truetype"); }
@@ -12,8 +16,23 @@ body {
   background: #af111c; }
   .navigation .brand-logo {
     font-family: infected; }
+    .navigation .brand-logo:hover {
+      color: gold; }
   .navigation .active {
     color: gold; }
+
+.snapshot {
+  margin: 1rem 0; }
+  .snapshot .mantra {
+    color: #fff;
+    font-weight: normal; }
+  .snapshot .cursorColor {
+    color: gold; }
+
+.overview p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff; }
 
 @media (max-width: 321px) {
   .github {

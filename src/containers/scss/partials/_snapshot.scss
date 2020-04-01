@@ -1,0 +1,23 @@
+.snapshot {
+  margin: 1rem 0;
+  .mantra {
+    color: $primary;
+    font: {
+      weight: normal;
+    }
+  }
+
+  .cursorColor {
+    color: gold;
+  }
+}
+
+.overview {
+  p {
+    font: {
+      size: 1.2rem;
+      weight: 700;
+    }
+    color: $primary;
+  }
+}
