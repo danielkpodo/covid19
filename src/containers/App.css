@@ -21,16 +21,24 @@ img {
   .navigation .active {
     color: gold; }
 
+@font-face {
+  font-family: "Bloody";
+  src: url("../assets/fonts/BLOODY.TTF") format("truetype"); }
+@font-face {
+  font-family: "True Crimes";
+  src: url("../assets/fonts/crimes.ttf") format("truetype"); }
 .snapshot {
   margin: 1rem 0; }
   .snapshot .mantra {
     color: #fff;
-    font-weight: normal; }
+    font-weight: normal;
+    font-family: Bloody; }
   .snapshot .cursorColor {
     color: gold; }
 
 .overview p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  font-family: "True Crimes";
   font-weight: 700;
   color: #fff; }
 
