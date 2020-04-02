@@ -10,7 +10,7 @@ import Tabs from "./Tabs";
 const ContentLayout = () => {
   return (
     <div className="content-layout">
-      <Headline title="Overview of Happenings and Updates from GHS" />
+      <Headline title="Coronavirus Resources and Updates from GHS" />
       <div className="row container">
         <div className="col l8">
           <Tabs />
