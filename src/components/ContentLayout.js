@@ -5,13 +5,16 @@ import StatsExplanation from "./aside/StatsExplanation";
 import StarOnGithub from "./aside/StarOnGithub";
 import EmergencyContacts from "./aside/EmergencyContacts";
 import Headline from "./Headline";
+import Tabs from "./Tabs";
 
 const ContentLayout = () => {
   return (
     <div className="content-layout">
       <Headline title="Overview of Happenings and Updates from GHS" />
       <div className="row container">
-        <div className="col l8">Tabs Here</div>
+        <div className="col l8">
+          <Tabs />
+        </div>
         <div className="col l4">
           <TotalCases />
           <BasicStats />

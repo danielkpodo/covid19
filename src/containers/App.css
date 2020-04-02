@@ -81,6 +81,24 @@ img {
     padding: 1rem 0.625rem;
     color: #fff; }
 
+.tabs {
+  background: transparent; }
+  .tabs li {
+    font-weight: bolder; }
+
+.resources {
+  padding: 3rem 0.625rem; }
+  .resources .resource-link {
+    padding: 1rem 1rem;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    margin: 0.625rem 0; }
+    .resources .resource-link a {
+      color: #fff; }
+      .resources .resource-link a:hover {
+        color: gold; }
+
 @media (max-width: 321px) {
   .github {
     visibility: hidden; } }
