@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import { NavLink } from "react-router-dom";
 import M from "materialize-css";
 
@@ -7,6 +7,7 @@ import Logo from "./Logo";
 const NavigationMenu = () => {
   const [navLinks, setMenuStates] = useState([
     { text: "Statistics", path: "/statistics" },
+    { text: "Local News", path: "/local/news" },
     { text: "Global News", path: "/global/news" }
   ]);
 
@@ -24,7 +25,7 @@ const NavigationMenu = () => {
   });
 
   return (
-    <div className="navbar-fixed">
+    <Fragment>
       <nav className="navigation">
         <div className="nav-wrapper container">
           <Logo />
@@ -39,7 +40,7 @@ const NavigationMenu = () => {
       <ul className="sidenav" id="mobile-demo">
         {menuLinks}
       </ul>
-    </div>
+    </Fragment>
   );
 };
 

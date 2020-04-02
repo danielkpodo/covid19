@@ -2,6 +2,11 @@
 @import "./scss/partials/global";
 @import "./scss/partials/navigation";
 @import "./scss/partials/snapshot";
+@import "./scss/partials/totalcases";
+@import "./scss/partials/basicstats";
+@import "./scss/partials/statsexplain";
+@import "./scss/partials/stargithub";
+@import "./scss/partials/contentlayout";
 
 @media (max-width: 321px) {
   .github {

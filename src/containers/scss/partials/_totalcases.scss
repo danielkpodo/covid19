@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap");
+.total-cases {
+  color: $dark;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: $roboto-condensed;
+  .case-count {
+    font: {
+      size: 5rem;
+    }
+    color: $very-dark-red;
+  }
+}

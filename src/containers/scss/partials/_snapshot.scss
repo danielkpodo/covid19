@@ -9,7 +9,12 @@
 }
 
 .snapshot {
-  margin: 1rem 0;
+  background: {
+    color: $very-dark-red;
+    image: url("../assets/images/blood.jpg");
+    repeat: no-repeat;
+    size: cover;
+  }
   .mantra {
     color: $primary;
     font: {
@@ -32,4 +37,8 @@
     }
     color: $primary;
   }
+}
+
+.corologo {
+  color: #fff;
 }

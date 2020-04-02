@@ -1,12 +1,8 @@
+$roboto-condensed: "Roboto Condensed", sans-serif;
 body {
-  background: {
-    color: $very-dark-red;
-    image: url("../assets/images/blood.jpg");
-    repeat: no-repeat;
-    size: cover;
-  }
-
-  height: 100vh;
+  font-size: 100%;
+  line-height: 1.5rem;
+  background: #420d09;
 }
 
 img {

@@ -26,7 +26,7 @@ const ghsWebScrapper = async () => {
     const videoUrl = $(".stream-box-title a").attr("href");
     latestVideo.videoLink = videoUrl;
 
-    console.log("Post Length: ", postData.length);
+    console.log("Post Length: ", postData);
     console.log("Video title: ", latestVideo);
   } catch (error) {
     console.log(error);

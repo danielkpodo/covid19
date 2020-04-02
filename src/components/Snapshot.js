@@ -8,8 +8,8 @@ const Snapshot = () => {
         <div className="col s12 m6 l6">
           <img
             src={coronaVirus}
-            alt="Coronavirus Image"
-            className="materialboxed responsive-img"
+            alt="Coronavirus logo"
+            className="materialboxed responsive-img corologo"
           />
         </div>
         <div className="col s6 m6 l6">
@@ -22,14 +22,17 @@ const Snapshot = () => {
             <Typing>
               <div>
                 <p>
-                  There are currently 100 confirmed cases{" "}
-                  <Typing.Delay ms={1000} />
+                  There are{" "}
+                  <span style={{ color: "yellowgreen" }}>
+                    currently 100 confirmed
+                  </span>{" "}
+                  cases <Typing.Delay ms={1000} />
                   in Ghana
                 </p>
                 <p style={{ color: "yellow" }}>
                   59 recovered cases has been recorded
                 </p>
-                <p>10 lives has been lost to the disease</p>
+                <p>10 lives has been lost to the virus</p>
               </div>
             </Typing>
           </div>
