@@ -12,10 +12,10 @@ const ContentLayout = () => {
     <div className="content-layout">
       <Headline title="Coronavirus Resources and Updates from GHS" />
       <div className="row container">
-        <div className="col l8">
+        <div className="col s12 l8">
           <Tabs />
         </div>
-        <div className="col l4">
+        <div className="col s12 l4">
           <TotalCases />
           <BasicStats />
           <StatsExplanation />

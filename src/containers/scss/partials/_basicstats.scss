@@ -1,6 +1,9 @@
 .basic-stats {
   padding: 5px;
   color: $dark;
+  @include tablet {
+    text-align: center;
+  }
   p {
     font-size: 1.2rem;
   }

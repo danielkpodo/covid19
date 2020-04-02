@@ -17,6 +17,14 @@
   }
   .mantra {
     color: $primary;
+    @include medium {
+      font-size: 2.5rem;
+    }
+
+    @include mobile {
+      font-size: 2rem;
+      text-align: center;
+    }
     font: {
       weight: normal;
       family: Bloody;

@@ -1,4 +1,7 @@
 .stats-explain {
+  @include tablet {
+    text-align: center;
+  }
   color: $dark;
   font-size: 1.1rem;
   padding: 5px;

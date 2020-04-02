@@ -12,7 +12,7 @@ const Snapshot = () => {
             className="materialboxed responsive-img corologo"
           />
         </div>
-        <div className="col s6 m6 l6">
+        <div className="col s12 m6 l6">
           <Typing speed={100} cursorClassName="cursorColor">
             <h2 className="mantra">
               Everyone is talking about the deadly coronavirus
