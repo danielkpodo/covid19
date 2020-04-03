@@ -92,7 +92,7 @@ const App = () => {
     <main>
       <NavigationMenu />
       <GHSContext.Provider value={{ posts, video, cases, loading }}>
-        <Route exact path="/ghana/covid19" render={() => <Homepage />} />
+        <Route exact path="/covid19" render={() => <Homepage />} />
         <GithubCorner
           href="https://github.com/danielkpodo/paper-zone"
           size="55"
@@ -100,11 +100,11 @@ const App = () => {
           className="github"
           target="_blank"
         />
-        <Route path="/ghana/local/news" render={() => <LocalNews />} />
-        <Route path="/global/news" component={GlobalNews} />
-        <Route path="/statistics" component={Statistics} />
+        <Route path="/covid19/local-news" render={() => <LocalNews />} />
+        <Route path="/covid19/global-/news" component={GlobalNews} />
+        <Route path="/covid19/statistics" component={Statistics} />
       </GHSContext.Provider>
-      <Redirect to="/ghana/covid19" />
+      <Redirect to="/covid19" />
     </main>
   );
 };

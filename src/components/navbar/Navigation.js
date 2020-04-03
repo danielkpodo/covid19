@@ -6,9 +6,9 @@ import Logo from "./Logo";
 
 const NavigationMenu = () => {
   const [navLinks, setMenuStates] = useState([
-    { text: "Statistics", path: "/statistics" },
-    { text: "Local News", path: "/ghana/local/news" },
-    { text: "Global News", path: "/global/news" }
+    { text: "Statistics", path: "/covid19/statistics" },
+    { text: "Local News", path: "/covid19/local-news" },
+    { text: "Global News", path: "/covid19/global-news" }
   ]);
 
   useEffect(() => {

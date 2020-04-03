@@ -27,7 +27,9 @@ const LiveUpdates = () => {
             <div className="ui stacked segment red lighten-5" key={index}>
               <h6>{capitalize(post.title.slice(0, 76))}</h6>
               <div className="ui divider"></div>
-              {post.content}
+              <p style={{ whiteSpace: "pre-line" }}>
+                {post.content.replace("/\n\r\n\r\n/g", "<br />")}
+              </p>
             </div>
           );
         })
