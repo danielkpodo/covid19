@@ -6,7 +6,7 @@ import GithubCorner from "react-github-corner";
 import axios from "axios";
 import cheerio from "cheerio";
 import GHSContext from "../context/GHScontext";
-import LocalNews from "../components/LocalNews";
+import LocalNews from "../components/local_news/LocalNews";
 import "./App.css";
 
 const App = () => {

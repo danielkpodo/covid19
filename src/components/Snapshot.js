@@ -5,11 +5,6 @@ import GHSContext from "../context/GHScontext";
 
 const Snapshot = () => {
   const GHSData = useContext(GHSContext);
-  console.log("Snapshot Component", GHSData);
-  console.log("Total", GHSData.cases.count);
-  console.log("Recovered", GHSData.cases.recoveries);
-  console.log("Deaths", GHSData.cases.deaths);
-  console.log("isLoading", GHSData.loading);
   return (
     <div className="snapshot">
       <div className="row">
