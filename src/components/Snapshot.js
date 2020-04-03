@@ -23,7 +23,7 @@ const Snapshot = () => {
           <div className="overview center-align">
             <div>
               There are
-              <span style={{ color: "yellowgreen" }}>
+              <span style={{ color: "#fff" }}>
                 {" "}
                 currently {GHSData.loading ? (
                   GHSData.cases.count

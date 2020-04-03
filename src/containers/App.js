@@ -7,6 +7,8 @@ import axios from "axios";
 import cheerio from "cheerio";
 import GHSContext from "../context/GHScontext";
 import LocalNews from "../components/local_news/LocalNews";
+import Statistics from "../pages/Statistics";
+import GlobalNews from "../pages/GlobalNews";
 import "./App.css";
 
 const App = () => {
@@ -84,7 +86,7 @@ const App = () => {
         setVideo(latestVideo);
         setCases(confirmedCases);
       })
-      .catch(error => console.log("Miserable Error: ", error));
+      .catch(error => console.log(error));
   }, []);
   return (
     <main>
@@ -99,7 +101,10 @@ const App = () => {
           target="_blank"
         />
         <Route path="/ghana/local/news" render={() => <LocalNews />} />
+        <Route path="/global/news" component={GlobalNews} />
+        <Route path="/statistics" component={Statistics} />
       </GHSContext.Provider>
+      <Redirect to="/ghana/covid19" />
     </main>
   );
 };

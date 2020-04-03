@@ -20,6 +20,16 @@ const StarOnGithub = () => {
         >
           Daniel Narh
         </a>
+        <br /> <br />
+        Email:{" "}
+        <a
+          href="mailto:kpododanielnarh@gmail.com"
+          title="Send me a mail"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          kpododanielnarh@gmail.com
+        </a>
       </h5>
     </div>
   );

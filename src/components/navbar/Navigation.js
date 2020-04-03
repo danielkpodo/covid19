@@ -29,7 +29,12 @@ const NavigationMenu = () => {
       <nav className="navigation">
         <div className="nav-wrapper container">
           <Logo />
-          <a href="#" data-target="mobile-demo" className="sidenav-trigger">
+          <a
+            href="#"
+            data-target="mobile-demo"
+            className="sidenav-trigger"
+            rel="noopener noreferrer"
+          >
             <i className="material-icons">menu</i>
           </a>
           <ul id="nav-mobile" className="right hide-on-med-and-down">

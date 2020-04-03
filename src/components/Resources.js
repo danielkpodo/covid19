@@ -35,7 +35,12 @@ const HealthResources = () => {
       {resources.map((resource, index) => {
         return (
           <div className="resource-link z-depth-5 red accent-1" key={index}>
-            <a href={resource.url} target="_blank" title={resource.title}>
+            <a
+              href={resource.url}
+              target="_blank"
+              title={resource.title}
+              rel="noopener noreferrer"
+            >
               {resource.text}
             </a>{" "}
             <MdTimeline />
