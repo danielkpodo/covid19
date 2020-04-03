@@ -50,9 +50,28 @@ const App = () => {
         ).text();
 
         confirmedCases.count = casesCount;
-        confirmedCases.date = new Date();
+        let today = new Date();
+        let date =
+          today.getFullYear() +
+          "-" +
+          (today.getMonth() + 1) +
+          "-" +
+          today.getDate();
+        let time =
+          today.getHours() +
+          ":" +
+          today.getMinutes() +
+          ":" +
+          today.getSeconds();
+        let dateTime = date + " " + time;
+        confirmedCases.date = dateTime;
         confirmedCases.recoveries = recoveries;
         confirmedCases.deaths = deaths;
+
+        const CFR = deaths / casesCount;
+        confirmedCases.CFR = CFR.toFixed(2);
+        const recoveryRate = recoveries / casesCount;
+        confirmedCases.recoveryRate = recoveryRate.toFixed(2);
 
         const videoTitle = $(".stream-box-title").text();
         latestVideo.videoHeading = videoTitle;

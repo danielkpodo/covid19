@@ -1,20 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
+import GHSContext from "../context/GHScontext";
+import Spinner from "./Spinner";
 
 const LiveUpdates = () => {
+  const GHSData = useContext(GHSContext);
   return (
     <div className="live-updates">
-      <h5 className="video-header">
-        President Akuffo Addo's Latest Address to the Nation
-      </h5>
-      <div className="video-container z-depth-3">
-        <iframe
-          width="853"
-          height="480"
-          src="https://www.youtube.com/embed/m3VpF0XBTo0"
-          frameBorder="0"
-          allowFullScreen
-        ></iframe>
-      </div>
+      <h5 className="video-header">{GHSData.video.videoHeading}</h5>
+      {GHSData.loading ? (
+        <div className="video-container z-depth-3">
+          <iframe
+            width="853"
+            height="480"
+            src={`${GHSData.video.videoLink}`}
+            frameBorder="0"
+            allowFullScreen
+          ></iframe>
+        </div>
+      ) : (
+        <Spinner />
+      )}
       <div className="ui stacked segment red lighten-5">
         <h5>Ghana Records 200 Cases of Coronavirus</h5>
         <div className="ui divider"></div>

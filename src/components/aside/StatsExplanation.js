@@ -7,15 +7,15 @@ const StatsExplanation = () => {
         How Stats were calculated
       </h4>
       <p>
-        Total cases, deaths, and recoveries data from WorldoMeters, which gets
-        data from sources such as{" "}
+        Total cases, deaths, and recoveries are retrieved asynchronously from
+        the official{" "}
         <a
-          href="https://www.who.int/"
-          title="World Health Organization"
+          href="https://ghanahealthservice.org/covid19/"
+          title="Compare data to the ghs website"
           target="_blank"
           rel="noopener noreferrer"
         >
-          WHO
+          Ghana Health Service Website
         </a>
       </p>
       <p>

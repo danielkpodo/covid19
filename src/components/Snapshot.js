@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import coronaVirus from "../assets/images/coronavirus.png";
+import Loader from "./Loader";
 import GHSContext from "../context/GHScontext";
 
 const Snapshot = () => {
@@ -26,22 +27,24 @@ const Snapshot = () => {
 
           <div className="overview center-align">
             <div>
-              <p>
-                There are
-                <span style={{ color: "yellowgreen" }}>
-                  {" "}
-                  currently {GHSData.loading ? GHSData.cases.count : 90}{" "}
-                  confirmed cases in Ghana
-                </span>
-              </p>
-              <p style={{ color: "yellow" }}>
-                {GHSData.loading ? GHSData.cases.recoveries : 34} recovered
-                cases has been recorded
-              </p>
-              <p>
-                {GHSData.loading ? GHSData.cases.deaths : 2} lives has been lost
-                to the virus
-              </p>
+              There are
+              <span style={{ color: "yellowgreen" }}>
+                {" "}
+                currently {GHSData.loading ? (
+                  GHSData.cases.count
+                ) : (
+                  <Loader />
+                )}{" "}
+                confirmed cases in Ghana
+              </span>
+            </div>
+            <div style={{ color: "yellow" }}>
+              {GHSData.loading ? GHSData.cases.recoveries : <Loader />}{" "}
+              recovered cases has been recorded
+            </div>
+            <div>
+              {GHSData.loading ? GHSData.cases.deaths : <Loader />} lives has
+              been lost to the virus
             </div>
           </div>
         </div>
