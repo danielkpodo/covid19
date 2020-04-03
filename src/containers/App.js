@@ -94,7 +94,7 @@ const App = () => {
       <GHSContext.Provider value={{ posts, video, cases, loading }}>
         <Route exact path="/covid19" render={() => <Homepage />} />
         <GithubCorner
-          href="https://github.com/danielkpodo/paper-zone"
+          href="https://github.com/danielkpodo/covid19/tree/master"
           size="55"
           bannerColor="#8a0303"
           className="github"
