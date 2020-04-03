@@ -1,6 +1,6 @@
 {
   "homepage": "https://danielkpodo.github.io/covid19",
-  "name": "ghs-covid19",
+  "name": "covid19",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,7 +9,6 @@
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.2",
     "cheerio": "^1.0.0-rc.3",
-    "dotenv": "^8.2.0",
     "gh-pages": "^2.2.0",
     "materialize-css": "^1.0.0-rc.2",
     "node-cron": "^2.0.3",
@@ -19,9 +18,7 @@
     "react-icons": "^3.9.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
-    "react-tilt": "^0.1.4",
-    "react-typing-animation": "^1.6.2",
-    "typed.js": "^2.0.11"
+    "react-tilt": "^0.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
