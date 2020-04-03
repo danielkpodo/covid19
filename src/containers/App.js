@@ -100,9 +100,9 @@ const App = () => {
           className="github"
           target="_blank"
         />
-        <Route path="/covid19/local-news" render={() => <LocalNews />} />
-        <Route path="/covid19/global-/news" component={GlobalNews} />
-        <Route path="/covid19/statistics" component={Statistics} />
+        <Route exact path="/covid19/local-news" render={() => <LocalNews />} />
+        <Route exact path="/covid19/statistics" component={Statistics} />
+        <Route exact path="/covid19/global-news" component={GlobalNews} />
       </GHSContext.Provider>
       <Redirect to="/covid19" />
     </main>
