@@ -1,0 +1,48 @@
+.local-news {
+  .news-item {
+    header {
+      padding: 0.625rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      align-content: center;
+    }
+    h2 {
+      font-size: 2.5rem;
+      opacity: 0.6;
+      color: $primary;
+      text-align: center;
+    }
+    h3 {
+      font-size: 2rem;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+    max-width: 650px;
+    margin: 50px auto;
+  }
+
+  .snippet {
+    a {
+      color: $dark;
+      &:hover {
+        color: #333;
+      }
+    }
+  }
+
+  .source {
+    margin: 0 auto;
+    width: 200px;
+
+    a {
+      color: orange;
+    }
+  }
+}
+
+.avatar {
+  width: 40px;
+}

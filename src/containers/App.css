@@ -321,6 +321,38 @@ img {
     opacity: 0; }
   40% {
     opacity: 1; } }
+.local-news .news-item {
+  max-width: 650px;
+  margin: 50px auto; }
+  .local-news .news-item header {
+    padding: 0.625rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center; }
+  .local-news .news-item h2 {
+    font-size: 2.5rem;
+    opacity: 0.6;
+    color: #fff;
+    text-align: center; }
+  .local-news .news-item h3 {
+    font-size: 2rem;
+    text-align: center; }
+  .local-news .news-item p {
+    text-align: center; }
+.local-news .snippet a {
+  color: #000; }
+  .local-news .snippet a:hover {
+    color: #333; }
+.local-news .source {
+  margin: 0 auto;
+  width: 200px; }
+  .local-news .source a {
+    color: orange; }
+
+.avatar {
+  width: 40px; }
+
 @media (max-width: 321px) {
   .github {
     visibility: hidden; } }

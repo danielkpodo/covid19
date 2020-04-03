@@ -6,6 +6,7 @@ import GithubCorner from "react-github-corner";
 import axios from "axios";
 import cheerio from "cheerio";
 import GHSContext from "../context/GHScontext";
+import LocalNews from "../components/LocalNews";
 import "./App.css";
 
 const App = () => {
@@ -98,6 +99,7 @@ const App = () => {
           target="_blank"
         />
         <Redirect to="/ghana/covid19" />
+        <Route path="/ghana/local/news" render={() => <LocalNews />} />
       </GHSContext.Provider>
     </main>
   );
