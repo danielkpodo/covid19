@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import coronaVirus from "../assets/images/coronavirus.png";
-import Typing from "react-typing-animation";
+import GHSContext from "../context/GHScontext";
+
 const Snapshot = () => {
+  const GHSData = useContext(GHSContext);
+  console.log("Snapshot Component", GHSData);
+  console.log("Total", GHSData.cases.count);
+  console.log("Recovered", GHSData.cases.recoveries);
+  console.log("Deaths", GHSData.cases.deaths);
+  console.log("isLoading", GHSData.loading);
   return (
     <div className="snapshot">
       <div className="row">
@@ -13,28 +20,29 @@ const Snapshot = () => {
           />
         </div>
         <div className="col s12 m6 l6">
-          <Typing speed={100} cursorClassName="cursorColor">
-            <h2 className="mantra">
-              Everyone is talking about the deadly coronavirus
-            </h2>
-          </Typing>
+          <h2 className="mantra">
+            Everyone is talking about the deadly coronavirus
+          </h2>
+
           <div className="overview center-align">
-            <Typing>
-              <div>
-                <p>
-                  There are{" "}
-                  <span style={{ color: "yellowgreen" }}>
-                    currently 100 confirmed
-                  </span>{" "}
-                  cases <Typing.Delay ms={1000} />
-                  in Ghana
-                </p>
-                <p style={{ color: "yellow" }}>
-                  59 recovered cases has been recorded
-                </p>
-                <p>10 lives has been lost to the virus</p>
-              </div>
-            </Typing>
+            <div>
+              <p>
+                There are
+                <span style={{ color: "yellowgreen" }}>
+                  {" "}
+                  currently {GHSData.loading ? GHSData.cases.count : 90}{" "}
+                  confirmed cases in Ghana
+                </span>
+              </p>
+              <p style={{ color: "yellow" }}>
+                {GHSData.loading ? GHSData.cases.recoveries : 34} recovered
+                cases has been recorded
+              </p>
+              <p>
+                {GHSData.loading ? GHSData.cases.deaths : 2} lives has been lost
+                to the virus
+              </p>
+            </div>
           </div>
         </div>
       </div>
