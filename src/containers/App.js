@@ -98,7 +98,6 @@ const App = () => {
           className="github"
           target="_blank"
         />
-        <Redirect to="/ghana/covid19" />
         <Route path="/ghana/local/news" render={() => <LocalNews />} />
       </GHSContext.Provider>
     </main>
