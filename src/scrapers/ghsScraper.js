@@ -2,9 +2,9 @@ const axios = require("axios");
 const cheerio = require("cheerio");
 const postData = [];
 const latestVideo = {};
+const confirmedCases = {};
 
-//Todo -> Scrape the latest video on the page
-const ghsWebScrapper = async () => {
+const ghsWebScraper = async () => {
   try {
     const response = await axios.get("https://ghanahealthservice.org/covid19/");
     const html = await response.data;
@@ -21,6 +21,23 @@ const ghsWebScrapper = async () => {
       postData.push(posts);
     });
 
+    const casesCount = $(
+      ".grid-column div:nth-child(5) .widget-box-content span"
+    ).text();
+
+    const recoveries = $(
+      ".grid-column div:nth-child(2) .widget-box-content .information-line-list div:nth-child(2) .information-line-text"
+    ).text();
+
+    const deaths = $(
+      ".grid-column div:nth-child(2) .widget-box-content .information-line-list div:nth-child(6) .information-line-text"
+    ).text();
+
+    confirmedCases.count = casesCount;
+    confirmedCases.date = new Date();
+    confirmedCases.recoveries = recoveries;
+    confirmedCases.deaths = deaths;
+
     const videoTitle = $(".stream-box-title").text();
     latestVideo.videoHeading = videoTitle;
     const videoUrl = $(".stream-box-title a").attr("href");
@@ -28,11 +45,12 @@ const ghsWebScrapper = async () => {
 
     console.log("Post Length: ", postData);
     console.log("Video title: ", latestVideo);
+    console.log("Confirmed Case: ", confirmedCases);
   } catch (error) {
     console.log(error);
   }
 };
 
-ghsWebScrapper();
+ghsWebScraper();
 
-module.exports = ghsWebScrapper;
+module.exports = ghsWebScraper;
