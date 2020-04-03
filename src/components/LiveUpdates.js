@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import GHSContext from "../context/GHScontext";
 import Spinner from "./Spinner";
+import capitalize from "../custom_hooks/capitalize";
 
 const LiveUpdates = () => {
   const GHSData = useContext(GHSContext);
@@ -20,17 +21,21 @@ const LiveUpdates = () => {
       ) : (
         <Spinner />
       )}
-      <div className="ui stacked segment red lighten-5">
-        <h5>Ghana Records 200 Cases of Coronavirus</h5>
-        <div className="ui divider"></div>
-        <p>
-          Pellentesque habitant morbi tristique senectus et netus et malesuada
-          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
-          ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
-          egestas semper. Aenean ultricies mi vitae est. Mauris placerat
-          eleifend leo.
-        </p>
-      </div>
+      {GHSData.loading ? (
+        GHSData.posts.map((post, index) => {
+          return (
+            <div className="ui stacked segment red lighten-5" key={index}>
+              <h6>{capitalize(post.title.slice(0, 76))}</h6>
+              <div className="ui divider"></div>
+              {post.content}
+            </div>
+          );
+        })
+      ) : (
+        <h6 style={{ color: "#fff", textAlign: "center" }}>
+          Loading situational updates...
+        </h6>
+      )}
     </div>
   );
 };

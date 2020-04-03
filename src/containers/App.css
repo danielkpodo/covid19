@@ -130,6 +130,8 @@ img {
     opacity: 0.8; }
   .live-updates .video-container {
     border-radius: 10px; }
+  .live-updates .articles {
+    margin: 1rem 0; }
 
 @media (max-width: 768px) {
   .emergency-contacts {
