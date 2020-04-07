@@ -6,6 +6,7 @@ import StarOnGithub from "./aside/StarOnGithub";
 import EmergencyContacts from "./aside/EmergencyContacts";
 import Headline from "./Headline";
 import Tabs from "./Tabs";
+import GlobalStats from "./aside/GlobalStats";
 
 const ContentLayout = () => {
   return (
@@ -18,6 +19,7 @@ const ContentLayout = () => {
         <div className="col s12 l4">
           <TotalCases />
           <BasicStats />
+          <GlobalStats />
           <StatsExplanation />
           <EmergencyContacts />
           <StarOnGithub />

@@ -1,19 +1,10 @@
 import React from "react";
+import CountryStats from "../components/countries/CountryStats";
 
 const Statistics = () => {
   return (
     <div className="stattistics">
-      <h3
-        style={{
-          marginTop: "50px",
-          textAlign: "center",
-          opacity: "0.8",
-          color: "#fff",
-          fontSize: "2rem"
-        }}
-      >
-        This page will soon update with countries data...
-      </h3>
+      <CountryStats />
     </div>
   );
 };
