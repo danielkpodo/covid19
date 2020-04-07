@@ -7,12 +7,12 @@ const Tabs = () => {
     <div className="resources-updates">
       <ul id="tabs-swipe-demo" className="tabs">
         <li className="tab col s6">
-          <a href="#resources">Health Resources</a>
+          <a href="#resources" className="active">
+            Health Resources
+          </a>
         </li>
         <li className="tab col s6">
-          <a className="active" href="#updates">
-            GHS Live Updates
-          </a>
+          <a href="#updates">GHS Live Updates</a>
         </li>
       </ul>
       <div id="resources" className="col s12">

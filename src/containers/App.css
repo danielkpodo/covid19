@@ -9,23 +9,21 @@ img {
   display: block; }
 
 @font-face {
-  font-family: "infected";
-  src: url("../assets/fonts/INFECTED.ttf") format("truetype"); }
+  font-family: "Bebas";
+  src: url("../assets/fonts/BebasNeue-Regular.ttf") format("truetype"); }
 .navigation {
   background: #af111c; }
   .navigation .brand-logo {
-    font-family: infected; }
+    letter-spacing: 1.5px;
+    font-family: Bebas; }
     .navigation .brand-logo:hover {
       color: gold; }
   .navigation .active {
     color: gold; }
 
 @font-face {
-  font-family: "Bloody";
-  src: url("../assets/fonts/BLOODY.TTF") format("truetype"); }
-@font-face {
-  font-family: "True Crimes";
-  src: url("../assets/fonts/crimes.ttf") format("truetype"); }
+  font-family: "Bebas";
+  src: url("../assets/fonts/BebasNeue-Regular.ttf") format("truetype"); }
 .snapshot {
   background-color: #8a0303;
   background-image: url("../assets/images/blood.jpg");
@@ -34,10 +32,10 @@ img {
   .snapshot .mantra {
     color: #fff;
     font-weight: normal;
-    font-family: Bloody; }
+    font-family: Bebas; }
     @media (max-width: 960px) {
       .snapshot .mantra {
-        font-size: 2.5rem; } }
+        font-size: 3rem; } }
     @media (max-width: 600px) {
       .snapshot .mantra {
         font-size: 2rem;
@@ -48,8 +46,7 @@ img {
 .overview {
   margin-bottom: 4rem; }
   .overview div {
-    font-size: 1.5rem;
-    font-family: "True Crimes";
+    font-size: 1.3rem;
     font-weight: 700;
     padding: 10px;
     color: #fff; }

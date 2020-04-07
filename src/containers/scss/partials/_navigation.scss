@@ -1,14 +1,15 @@
 @font-face {
-  font-family: "infected";
-  src: url("../assets/fonts/INFECTED.ttf") format("truetype");
+  font-family: "Bebas";
+  src: url("../assets/fonts/BebasNeue-Regular.ttf") format("truetype");
 }
 
 .navigation {
   background: $nav-color;
 
   .brand-logo {
+    letter-spacing: 1.5px;
     font: {
-      family: infected;
+      family: Bebas;
     }
     &:hover {
       color: gold;

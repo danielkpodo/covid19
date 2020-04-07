@@ -1,11 +1,6 @@
 @font-face {
-  font-family: "Bloody";
-  src: url("../assets/fonts/BLOODY.TTF") format("truetype");
-}
-
-@font-face {
-  font-family: "True Crimes";
-  src: url("../assets/fonts/crimes.ttf") format("truetype");
+  font-family: "Bebas";
+  src: url("../assets/fonts/BebasNeue-Regular.ttf") format("truetype");
 }
 
 .snapshot {
@@ -18,7 +13,7 @@
   .mantra {
     color: $primary;
     @include medium {
-      font-size: 2.5rem;
+      font-size: 3rem;
     }
 
     @include mobile {
@@ -27,7 +22,7 @@
     }
     font: {
       weight: normal;
-      family: Bloody;
+      family: Bebas;
     }
   }
 
@@ -40,8 +35,7 @@
   margin-bottom: 4rem;
   div {
     font: {
-      size: 1.5rem;
-      family: "True Crimes";
+      size: 1.3rem;
       weight: 700;
     }
     padding: 10px;

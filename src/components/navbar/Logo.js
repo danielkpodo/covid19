@@ -8,7 +8,7 @@ const Logo = () => {
       <Tilt className="Tilt" options={{ max: 10 }}>
         <div className="Tilt-inner">
           <Link to="/covid19" className="brand-logo">
-            CORONAVIRUS
+            COVITRACK
           </Link>
         </div>
       </Tilt>
