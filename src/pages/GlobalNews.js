@@ -9,11 +9,10 @@ const GlobalNews = () => {
           textAlign: "center",
           opacity: "0.8",
           color: "#fff",
-          fontSize: "2rem"
+          fontSize: "2rem",
         }}
       >
-        This page will soon update with news containing covid19 around the world
-        data...
+        This page is coming soon...
       </h3>
     </div>
   );

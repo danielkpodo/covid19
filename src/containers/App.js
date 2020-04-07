@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Route, Redirect } from "react-router-dom";
+import { Route } from "react-router-dom";
 import Homepage from "../pages/HomePage";
 import NavigationMenu from "../components/navbar/Navigation";
 import GithubCorner from "react-github-corner";
@@ -22,20 +22,16 @@ const App = () => {
       .get(
         "https://cors-anywhere.herokuapp.com/https://ghanahealthservice.org/covid19/"
       )
-      .then(response => {
+      .then((response) => {
         const $ = cheerio.load(response.data);
         const postData = [];
         const latestVideo = {};
         const confirmedCases = {};
 
         $(".widget-box-status-content").each((i, el) => {
-          const title = $(el)
-            .find("p strong")
-            .text();
+          const title = $(el).find("p strong").text();
 
-          const content = $(el)
-            .find(".widget-box-status-text")
-            .text();
+          const content = $(el).find(".widget-box-status-text").text();
           const posts = { title: title, content: content };
           postData.push(posts);
         });
@@ -86,7 +82,7 @@ const App = () => {
         setVideo(latestVideo);
         setCases(confirmedCases);
       })
-      .catch(error => console.log(error));
+      .catch((error) => console.log(error));
   }, []);
   return (
     <main>
@@ -100,11 +96,9 @@ const App = () => {
           className="github"
           target="_blank"
         />
-        <Route exact path="/covid19/local-news" render={() => <LocalNews />} />
         <Route exact path="/covid19/statistics" component={Statistics} />
         <Route exact path="/covid19/global-news" component={GlobalNews} />
       </GHSContext.Provider>
-      <Redirect to="/covid19" />
     </main>
   );
 };

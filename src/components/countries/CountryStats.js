@@ -14,7 +14,6 @@ const CountryStats = () => {
       .get("https://corona.lmao.ninja/all")
       .then((response) => {
         setRecentUpdate(response.data.updated);
-        console.log("Time", response.data.updated);
       })
       .catch((err) => console.log(err));
   }, []);

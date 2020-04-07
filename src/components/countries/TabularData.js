@@ -1,15 +1,17 @@
 import React, { Fragment } from "react";
 import Spinner from "../Spinner";
 import TableRow from "./TableRow";
+import moment from "moment";
 
 const TabularData = (props) => {
   const { countries, loading, latestUpdate } = props;
+  let time = moment(latestUpdate).format("dddd, MMMM Do, YYYY / hh:mm:ss A");
   return (
     <div className="tabular-data container ">
-      <p style={{ textAlign: "center", color: "orange" }}>
+      <p style={{ textAlign: "center", color: "#E8ED41", opacity: "0.8" }}>
         {loading
           ? countries.length !== 0
-            ? `Last updated: ${latestUpdate}`
+            ? `Last updated: ${time}`
             : null
           : null}
       </p>
