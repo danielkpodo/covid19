@@ -12,7 +12,10 @@ const SearchBox = (props) => {
           onChange={onFilter}
         />
       </div>
-      <p>Currently displaying data for {countries.length} affected countries</p>
+      <p>
+        Currently displaying data for {countries.length} affected{" "}
+        {countries.length > 1 ? "countries" : "country"}
+      </p>
     </div>
   );
 };
