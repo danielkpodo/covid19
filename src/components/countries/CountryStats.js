@@ -7,13 +7,27 @@ const CountryStats = () => {
   const [countries, setCountries] = useState([]);
   const [isLoading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
+  const [latestUpdate, setRecentUpdate] = useState("");
+
+  useEffect(() => {
+    axios
+      .get("https://corona.lmao.ninja/all")
+      .then((response) => {
+        setRecentUpdate(response.data.updated);
+        console.log("Time", response.data.updated);
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
   useEffect(() => {
     setLoading(false);
-    axios.get("https://corona.lmao.ninja/countries").then((response) => {
-      setCountries(response.data);
-      setLoading(true);
-    });
+    axios
+      .get("https://corona.lmao.ninja/countries")
+      .then((response) => {
+        setCountries(response.data);
+        setLoading(true);
+      })
+      .catch((error) => console.log(error));
   }, []);
 
   const handleCountryFilter = (event) => {
@@ -36,7 +50,11 @@ const CountryStats = () => {
       </div>
       <div className="row">
         <div className="col s12">
-          <TabularData countries={filteredCountries} loading={isLoading} />
+          <TabularData
+            countries={filteredCountries}
+            loading={isLoading}
+            latestUpdate={latestUpdate}
+          />
         </div>
       </div>
     </div>

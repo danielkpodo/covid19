@@ -3,9 +3,16 @@ import Spinner from "../Spinner";
 import TableRow from "./TableRow";
 
 const TabularData = (props) => {
-  const { countries, loading } = props;
+  const { countries, loading, latestUpdate } = props;
   return (
     <div className="tabular-data container ">
+      <p style={{ textAlign: "center", color: "orange" }}>
+        {loading
+          ? countries.length !== 0
+            ? `Last updated: ${latestUpdate}`
+            : null
+          : null}
+      </p>
       {loading ? (
         countries.length !== 0 ? (
           <table className="responsive-table centered highlight ui raised tall stacked segment">
