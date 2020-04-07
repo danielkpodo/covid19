@@ -9,6 +9,7 @@ const CountryStats = () => {
   const [search, setSearch] = useState("");
 
   useEffect(() => {
+    setLoading(false);
     axios.get("https://corona.lmao.ninja/countries").then((response) => {
       setCountries(response.data);
       setLoading(true);
