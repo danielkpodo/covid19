@@ -6,6 +6,7 @@ import TabularData from "./TabularData";
 const CountryStats = () => {
   const [countries, setCountries] = useState([]);
   const [isLoading, setLoading] = useState(false);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     axios.get("https://corona.lmao.ninja/countries").then((response) => {
@@ -14,16 +15,27 @@ const CountryStats = () => {
     });
   }, []);
 
+  const handleCountryFilter = (event) => {
+    setSearch(event.target.value);
+  };
+
+  const filteredCountries = countries.filter((c) => {
+    return c.country.toLowerCase().includes(search.toLowerCase());
+  });
+
   return (
     <div className="country-stats">
       <div className="row">
         <div className="col s12 m6 offset-m3 l6 offset-l3">
-          <SearchBox countries={countries} />
+          <SearchBox
+            onFilter={handleCountryFilter}
+            countries={filteredCountries}
+          />
         </div>
       </div>
       <div className="row">
         <div className="col s12">
-          <TabularData countries={countries} loading={isLoading} />
+          <TabularData countries={filteredCountries} loading={isLoading} />
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import React from "react";
 
 const SearchBox = (props) => {
-  const { countries } = props;
+  const { countries, onFilter } = props;
   return (
     <div className="searchbox z-depth-3">
       <div className="input-field">
@@ -9,6 +9,7 @@ const SearchBox = (props) => {
           type="text"
           placeholder="Start typing a country..."
           className="white-text search"
+          onChange={onFilter}
         />
       </div>
       <p>Currently displaying data for {countries.length} affected countries</p>
