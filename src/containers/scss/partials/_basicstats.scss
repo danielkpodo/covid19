@@ -10,4 +10,9 @@
   font: {
     family: $roboto-condensed;
   }
+
+  .gh-stats {
+    display: flex;
+    justify-content: space-between;
+  }
 }

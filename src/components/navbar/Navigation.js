@@ -6,6 +6,7 @@ import Logo from "./Logo";
 
 const NavigationMenu = () => {
   const [navLinks, setMenuStates] = useState([
+    { text: "Home", path: "/covid19" },
     { text: "Statistics", path: "/covid19/statistics" },
     { text: "Global News", path: "/covid19/global-news" },
   ]);

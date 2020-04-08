@@ -72,6 +72,9 @@ img {
       text-align: center; } }
   .basic-stats p {
     font-size: 1.2rem; }
+  .basic-stats .gh-stats {
+    display: flex;
+    justify-content: space-between; }
 
 .stats-explain {
   color: #000;
@@ -120,15 +123,6 @@ img {
 
 .live-updates {
   margin: 3rem 0; }
-  .live-updates .video-header {
-    color: #fff;
-    margin: 1rem 0;
-    font-weight: 500;
-    opacity: 0.8; }
-  .live-updates .video-container {
-    border-radius: 10px; }
-  .live-updates .articles {
-    margin: 1rem 0; }
 
 @media (max-width: 768px) {
   .emergency-contacts {

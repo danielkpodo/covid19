@@ -12,7 +12,7 @@ const Tabs = () => {
           </a>
         </li>
         <li className="tab col s6">
-          <a href="#updates">GHS Live Updates</a>
+          <a href="#updates">Data Visualization</a>
         </li>
       </ul>
       <div id="resources" className="col s12">

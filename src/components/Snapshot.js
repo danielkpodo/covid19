@@ -26,7 +26,7 @@ const Snapshot = () => {
               <span style={{ color: "#fff" }}>
                 {" "}
                 currently {GHSData.loading ? (
-                  GHSData.cases.count
+                  GHSData.cases.cases
                 ) : (
                   <Loader />
                 )}{" "}
@@ -34,8 +34,8 @@ const Snapshot = () => {
               </span>
             </div>
             <div style={{ color: "yellow" }}>
-              {GHSData.loading ? GHSData.cases.recoveries : <Loader />}{" "}
-              recovered cases has been recorded
+              {GHSData.loading ? GHSData.cases.recovered : <Loader />} recovered
+              cases has been recorded
             </div>
             <div>
               {GHSData.loading ? GHSData.cases.deaths : <Loader />} lives has
