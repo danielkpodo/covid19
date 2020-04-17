@@ -7,10 +7,12 @@ import GlobalCharts from "./visualizations/GlobalCharts";
 const LiveUpdates = () => {
   return (
     <div className="live-updates">
-      <GhanaChart />
-      <GhanaOverview />
-      <ComparisonStats />
-      <GlobalCharts />
+      <div className="charts hide-on-small-only">
+        <GhanaChart />
+        <GhanaOverview />
+        <ComparisonStats />
+        <GlobalCharts />
+      </div>
     </div>
   );
 };
