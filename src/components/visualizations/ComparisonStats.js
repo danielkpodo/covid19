@@ -113,7 +113,6 @@ class ComparisonStats extends Component {
                 display: this.props.displayLegend,
                 position: this.props.legendPosition,
               },
-              maintainAspectRatio: true,
             }}
           />
         ) : (

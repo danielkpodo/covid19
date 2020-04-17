@@ -31,8 +31,6 @@ class GlobalCharts extends Component {
         active: active,
         critical: critical,
       });
-
-      console.log("Global", response.data);
     });
   }
 
@@ -52,7 +50,6 @@ class GlobalCharts extends Component {
       critical,
     } = this.state;
 
-    console.log("Today Deaths", this.state.todayDeaths);
     return (
       <div className="charts ui tall stacked segment">
         <HorizontalBar
@@ -95,7 +92,6 @@ class GlobalCharts extends Component {
               position: this.props.legendPosition,
               fontColor: "#00ff00",
             },
-            maintainAspectRatio: true,
           }}
         />
       </div>

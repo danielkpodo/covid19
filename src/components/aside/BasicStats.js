@@ -19,6 +19,9 @@ const BasicStats = () => {
       {GHSData.loading ? (
         <Fragment>
           <p className="gh-stats">
+            <span>Total Tests </span> <span>{GHSData.cases.tests}</span>
+          </p>
+          <p className="gh-stats">
             <span>Confirmed Cases</span> <span>{GHSData.cases.cases}</span>
           </p>
           <p className="gh-stats">
