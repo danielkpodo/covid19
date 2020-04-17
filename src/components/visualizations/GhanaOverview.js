@@ -50,7 +50,7 @@ class GhanaOverview extends Component {
                 data: [cases, deaths, recovered, critical, active],
                 label: "Ghana",
                 backgroundColor: [
-                  "#EA5E83",
+                  "#E8ED41",
                   "#ff0000",
                   "#FDCD56",
                   "rgba(75, 192, 192, 0.6)",
