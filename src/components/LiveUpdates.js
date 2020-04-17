@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
+import GhanaChart from "./visualizations/GhanaChart";
+import GhanaOverview from "./visualizations/GhanaOverview";
 
 const LiveUpdates = () => {
   return (
     <div className="live-updates">
-      <h4 style={{ color: "#fff", opacity: "0.8" }}>
-        Data Visualization coming soon
-      </h4>
+      <GhanaChart />
+      <GhanaOverview />
     </div>
   );
 };
