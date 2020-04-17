@@ -8,7 +8,7 @@ const GlobalStats = () => {
   const [loadingCases, setLoadingCases] = useState(false);
 
   useEffect(() => {
-    axios.get("https://corona.lmao.ninja/all").then((response) => {
+    axios.get("https://corona.lmao.ninja/v2/all").then((response) => {
       setLoadingCases(true);
       setGlobalCases(response.data);
     });

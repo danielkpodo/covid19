@@ -8,15 +8,8 @@ const StatsExplanation = () => {
       </h4>
       <p>
         Total cases, deaths, and recoveries are retrieved asynchronously from
-        the official{" "}
-        <a
-          href="https://ghanahealthservice.org/covid19/"
-          title="Compare data to the ghs website"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Ghana Health Service Website
-        </a>
+        third party API's who obtained their data from WHO and John Hopkins
+        University
       </p>
       <p>
         Rates (percentages) are calculated by dividing the current amount of

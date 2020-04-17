@@ -11,7 +11,7 @@ const CountryStats = () => {
 
   useEffect(() => {
     axios
-      .get("https://corona.lmao.ninja/all")
+      .get("https://corona.lmao.ninja/v2/all")
       .then((response) => {
         setRecentUpdate(response.data.updated);
       })
@@ -21,7 +21,7 @@ const CountryStats = () => {
   useEffect(() => {
     setLoading(false);
     axios
-      .get("https://corona.lmao.ninja/countries")
+      .get("https://corona.lmao.ninja/v2/countries?yesterday=false")
       .then((response) => {
         setCountries(response.data);
         setLoading(true);

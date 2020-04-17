@@ -16,7 +16,7 @@ const App = () => {
   useEffect(() => {
     setLoading(false);
     axios
-      .get("https://corona.lmao.ninja/countries/Ghana")
+      .get("https://corona.lmao.ninja/v2/countries/Ghana?yesterday=false")
       .then((response) => {
         setCases(response.data);
         setLoading(true);
