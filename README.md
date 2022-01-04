@@ -1,4 +1,4 @@
-# covid19
+# CoviTrack
 Thiis is a live coronavirus tracker and monitor built in reactjs
 ## Technology Stack used
 + React.js
