@@ -5,3 +5,4 @@ Thiis is a live coronavirus tracker and monitor built in reactjs
 + HTML5
 + CSS3
 + Covid API from WHO
++ Sass
